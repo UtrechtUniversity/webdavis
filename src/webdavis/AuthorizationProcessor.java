@@ -222,10 +222,12 @@ public class AuthorizationProcessor {
 				user = user.substring(0, index);
 //				hasResource = true;
 			}
+// UU modification: below code commented out to allow '@' in username, do NOT interprete as server
 			if ((index = user.indexOf('@')) != -1) { // If user is user@server
-				serverName = user.substring(index + 1);
-				user = user.substring(0, index);
-				domain = serverName;
+//				serverName = user.substring(index + 1);
+//				user = user.substring(0, index);
+//				domain = serverName;
+
 //				if (!hasResource)
 //					davisConfig.getDefaultResource() = "";
 			}
